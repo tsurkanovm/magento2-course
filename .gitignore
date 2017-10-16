@@ -67,7 +67,6 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 !/vendor/magento/
-/app/
 /bin/
 /dev/
 /generated/
@@ -87,4 +86,3 @@ atlassian*
 /CONTRIBUTING.md
 /LICENSE.txt
 /grunt-config.json.sample
-/.htaccess.sample
