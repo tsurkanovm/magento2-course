@@ -108,7 +108,7 @@ return array (
     'Magento_CatalogWidget' => 1,
     'Magento_Wishlist' => 1,
     'Shopial_Facebook' => 1,
-    'Training_Test' => 1,
-    'Training_Test2' => 0,
+    'Unit1_FirstModule' => 1,
+    'Unit1_SecondModule' => 1,
   ),
 );
