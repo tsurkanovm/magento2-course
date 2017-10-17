@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Unit1\FirstModule\Api\ProductInterface"
-                type="Magento\Catalog\Model\ProductRepository"/>
+                type="Unit1\FirstModule\MagentoU\Product"/>
 
     <type name="Unit1\FirstModule\MagentoU\Test">
         <arguments>
+            <argument name="productRepository" xsi:type="object">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+            <argument name="productFactory" xsi:type="object">Magento\Catalog\Model\ProductFactory</argument>
+            <argument name="session" xsi:type="object">Magento\Checkout\Model\Session</argument>
+            <argument name="unit1Product" xsi:type="object">Unit1\FirstModule\Api\ProductInterface</argument>
             <argument name="justAParameter" xsi:type="string">Hello world!</argument>
-            <argument name="data" type="array">
-                <item name="test-array-item">Test Array Item!!!</item>
+            <argument name="data" xsi:type="array">
+                <item name="test-array-item" xsi:type="string">Test Array Item!!!</item>
             </argument>
         </arguments>
     </type>
