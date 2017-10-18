@@ -3,7 +3,6 @@
 namespace Training\Test\Observer;
 
 use Magento\Framework\App\ActionFlag;
-use Magento\Framework\App\ActionInterface;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\UrlInterface;
@@ -44,17 +43,17 @@ class RedirectToProductView implements ObserverInterface
 
     public function execute(Observer $observer)
     {
-        $request = $observer->getEvent()->getData('request');
-
-        if (($request->getModuleName() == 'catalog' || $request->getModuleName() == 'review')
-            & $request->getControllerName() == 'product') {
-            return;
-        }
-
-        $url = $this->_urlInterFace->getUrl('catalog/product/view/id/1');
-        $this->_logger->debug('Url->' . $url);
-        $action = $observer->getEvent()->getControllerAction();
-        $this->_actionFlag->set('', ActionInterface::FLAG_NO_DISPATCH, true);
-        $action->getResponse()->setRedirect($url);
+//        $request = $observer->getEvent()->getData('request');
+//
+//        if (($request->getModuleName() == 'catalog' || $request->getModuleName() == 'review')
+//            & $request->getControllerName() == 'product') {
+//            return;
+//        }
+//
+//        $url = $this->_urlInterFace->getUrl('catalog/product/view/id/1');
+//        $this->_logger->debug('Url->' . $url);
+//        $action = $observer->getEvent()->getControllerAction();
+//        $this->_actionFlag->set('', ActionInterface::FLAG_NO_DISPATCH, true);
+//        $action->getResponse()->setRedirect($url);
     }
 }
