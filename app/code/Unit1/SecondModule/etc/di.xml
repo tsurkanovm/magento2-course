@@ -9,4 +9,14 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="second" type="Unit1\SecondModule\Plugin\Model\Product" sortOrder="10" />
+    </type>
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="second" type="Unit1\SecondModule\Plugin\Block\Footer" sortOrder="10" />
+    </type>
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="second" type="Unit1\SecondModule\Plugin\Block\Breadcrumbs" sortOrder="10" />
+    </type>
 </config>
