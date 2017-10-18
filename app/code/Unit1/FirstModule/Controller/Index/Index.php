@@ -6,14 +6,8 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Action\Action;
 
-/**
- * Class Index
- * @package Unit1\FirstModule\Controller\Index\Index
- */
 class Index extends Action
 {
-
-
     /**
      * Index resultPageFactory
      * @var PageFactory
@@ -37,12 +31,11 @@ class Index extends Action
      */
     public function execute()
     {
-        $myTest = 'default';
-        $myTest = $this->_objectManager->get('Unit1\FirstModule\MagentoU\Test');
-        $testParam = $myTest->data;
-//        echo $testParam;
+        $myTestClass = $this->_objectManager->get('Unit1\FirstModule\MagentoU\Test');
+        $testParam = [$myTestClass->justAParameter,$myTestClass->data];
         print_r($testParam);
         exit;
+
 //        return $this->resultPageFactory->create();
     }
 }

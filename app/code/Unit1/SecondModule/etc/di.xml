@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Unit1\FirstModule\MagentoU\Test">
+        <arguments>
+            <argument name="justAParameter" xsi:type="string">Hello from Second module!!!</argument>
+            <argument name="data" xsi:type="array">
+                <item name="test-array-item2" xsi:type="string">Added in second module</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
