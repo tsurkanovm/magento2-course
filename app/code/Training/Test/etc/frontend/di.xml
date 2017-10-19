@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Controller\Product\View" type="Training\Test\Controller\ProductViewOverride"/>
+
     <type name="Magento\Framework\App\RouterList" shared="true">
         <arguments>
             <argument name="routerList" xsi:type="array">
