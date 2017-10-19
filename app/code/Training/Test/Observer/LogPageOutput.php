@@ -26,6 +26,6 @@ class LogPageOutput implements ObserverInterface
     {
         $response = $observer->getEvent()->getData('response');
         $body = $response->getBody();
-        $this->_logger->debug("--------\n\n\n BODY \n\n\n ". $body);
+//        $this->_logger->debug("--------\n\n\n BODY \n\n\n ". $body);
     }
 }
