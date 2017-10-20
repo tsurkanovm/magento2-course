@@ -2,7 +2,7 @@
 
 namespace Training\Test\Controller\Adminhtml\Action;
 
-use Magento\Framework\App\Action\Context;
+use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action;
 
@@ -12,8 +12,6 @@ use Magento\Backend\App\Action;
  */
 class Index extends Action
 {
-
-
     /**
      * Index resultPageFactory
      * @var PageFactory
@@ -45,8 +43,8 @@ class Index extends Action
      *
      * @return bool
      */
-//    protected function _isAllowed() {
-//        $secret = $this->getRequest()->getParam('secret');
-//        return isset($secret) && (int)$secret==1;
-//    }
+    protected function _isAllowed() {
+        $secret = $this->getRequest()->getParam('secret');
+        return !empty($secret);
+    }
 }
