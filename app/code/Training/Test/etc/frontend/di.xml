@@ -11,11 +11,4 @@
             </argument>
         </arguments>
     </type>
-
-    <type name="Training\Test\App\Router\CustomRouter">
-        <arguments>
-            <argument name="actionFactory" xsi:type="object">Magento\Framework\App\ActionFactory</argument>
-        </arguments>
-    </type>
-
 </config>
