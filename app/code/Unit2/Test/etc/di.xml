@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Magento\Framework\App\FrontController"
-                type="Training\Test\App\FrontController"/>
+    <preference for="Magento\Framework\App\FrontController" type="Unit2\Test\App\FrontController"/>
 
-    <type name="Training\Test\App\FrontController">
+    <type name="Unit2\Test\App\FrontController">
         <arguments>
             <argument name="logger" xsi:type="object">Psr\Log\LoggerInterface</argument>
         </arguments>
@@ -13,7 +12,7 @@
         <arguments>
             <argument name="handlerClassesList" xsi:type="array">
                 <item name="custom" xsi:type="array">
-                    <item name="class" xsi:type="string">Training\Test\App\Router\NoRouteHandler</item>
+                    <item name="class" xsi:type="string">Unit2\Test\App\Router\NoRouteHandler</item>
                     <item name="sortOrder" xsi:type="string">50</item>
                 </item>
             </argument>

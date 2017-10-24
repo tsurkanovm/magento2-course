@@ -1,14 +1,14 @@
 <?php
 
-namespace Training\Test\App;
+namespace Unit2\Test\App;
 
-use \Magento\Framework\App\FrontController as FrontControllerBase;
+use \Magento\Framework\App\FrontController as FC;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\Response\Http;
 use Magento\Framework\App\RouterList;
 use Psr\Log\LoggerInterface;
 
-class FrontController extends FrontControllerBase
+class FrontController extends FC
 {
     /**
      * @var LoggerInterface

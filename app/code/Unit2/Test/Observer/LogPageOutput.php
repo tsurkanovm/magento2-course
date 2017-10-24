@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\Test\Observer;
+namespace Unit2\Test\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;

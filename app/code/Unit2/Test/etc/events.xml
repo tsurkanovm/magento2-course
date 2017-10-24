@@ -2,9 +2,9 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="controller_action_predispatch">
-        <observer name="training_test" instance="Training\Test\Observer\RedirectToProductView" />
+        <observer name="training_test" instance="Unit2\Test\Observer\RedirectToProductView" />
     </event>
     <event name="controller_front_send_response_before">
-        <observer name="training_test" instance="Training\Test\Observer\LogPageOutput" />
+        <observer name="training_test" instance="Unit2\Test\Observer\LogPageOutput" />
     </event>
 </config>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\Test\App\Router;
+namespace Unit2\Test\App\Router;
 
 use Magento\Framework\App\RequestInterface;
 use \Magento\Framework\App\Router\NoRouteHandlerInterface;
