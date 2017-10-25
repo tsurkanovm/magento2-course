@@ -1,2 +1,2 @@
 ## Module 3. Rendering Flow
-### 3.5.3. Customize the Catalog\Product\View\Description block, implement th beforeToHtml() method, and set a custom description for the product here.
+### 3.6.2. Create a template block and a custom template file for it. Render the block in the controller.
