@@ -1,2 +1,2 @@
 ## Module 3. Rendering Flow
-### 3.5.1. Create a block extending AbstractBlock and implement the _toHtml() method. Render that block in the new controller
+### 3.5.2. Create and render a text block in the controller.
