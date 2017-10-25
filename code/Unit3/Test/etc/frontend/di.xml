@@ -6,7 +6,7 @@
                 type="Unit3\Test\Plugin\View\LoggedLayoutXMLPlugin" sortOrder="10"/>
     </type>
     <type name="Magento\Catalog\Block\Product\View\Description">
-        <plugin name="unit3-product-description"
-                type="Unit3\Test\Plugin\Block\ProductViewDescriptionPlugin" sortOrder="10"/>
+        <plugin name="unit3-set-product-description"
+                type="Unit3\Test\Plugin\Block\SetProductDescriptionPlugin" sortOrder="10"/>
     </type>
 </config>
