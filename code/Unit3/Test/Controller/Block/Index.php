@@ -10,13 +10,11 @@ use Magento\Framework\App\Action\Action;
  */
 class Index extends Action
 {
-    /**
-     * Function execute
-     */
     public function execute()
     {
         $layout = $this->_view->getLayout();
-        $block = $layout->createBlock('Unit3\Test\Block\Test');
+        $block = $layout->createBlock('Magento\Framework\View\Element\Text');
+        $block->setText("Hello world from text block !");
         $this->getResponse()->appendBody($block->toHtml());
     }
 }
