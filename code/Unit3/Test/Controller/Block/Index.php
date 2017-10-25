@@ -10,6 +10,7 @@ use Magento\Framework\App\Action\Action;
  */
 class Index extends Action
 {
+
     public function execute()
     {
         $layout = $this->_view->getLayout();
