@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content.top">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="one-page-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Custom Page</argument>
+                    <argument name="path" xsi:type="string">unit3render/layout/onepage</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Backend\Block\Template"
+                   name="unit3_content_top_template" template="Unit3_Render::content-top.phtml">
+                <arguments>
+                    <argument name="background_color" xsi:type="string">
+                        lightskyblue
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
