@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="unit3_content_top_template" >
+        <arguments>
+            <argument name="background_color" xsi:type="string">
+                orange
+            </argument>
+        </arguments>
+    </referenceBlock>
+</page>
