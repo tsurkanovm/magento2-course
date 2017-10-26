@@ -55,7 +55,7 @@ Get the URL from the request object request->getPathInfo(). Log it into the file
 #### 3.8.6. On the custom action you just added, remove the custom block from the content.top container.
 #### 3.8.7. Using layout XML, add a new link for the custom page you just created to the set of existing links at the top of every page.
 
-### Unit 3. Theme exercises
+### Unit 3. Theme exercises 
 
 1. Create new theme (Magento/luma as parent)
 2. Customize template by new theme.
