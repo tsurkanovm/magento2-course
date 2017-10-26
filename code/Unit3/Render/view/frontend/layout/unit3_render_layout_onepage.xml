@@ -4,4 +4,5 @@
     <head>
         <title>"One Page Title!"</title>
     </head>
+    <referenceBlock name="unit3_content_top_template" remove="true" />
 </page>
