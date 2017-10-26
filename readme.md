@@ -1,2 +1,2 @@
 ## Module 3. Theme exercises
-1. Create new theme (Magento/luma as parent)
+3. Customize js script (password hints) by new theme.
