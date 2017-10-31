@@ -61,3 +61,8 @@ Get the URL from the request object request->getPathInfo(). Log it into the file
 2. Customize template by new theme.
 3. Customize js script (password hints) by new theme.
 4. Remove searching field from all pages by new theme.
+
+### Unit 3. JavaScript exercises
+1. Create an extension which will print into the console a number of shown attributes in the "More Information" tab
+on the product details page.
+2. Create an extension that alerts the full action name on every page.
