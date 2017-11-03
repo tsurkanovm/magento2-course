@@ -67,6 +67,6 @@ Get the URL from the request object request->getPathInfo(). Log it into the file
 1. Create an extension which will print into the console a number of shown attributes in the "More Information" tab
 on the product details page.
 2. Create an extension that alerts the full action name on every page.
-3.Dump the data (to console) passed to the customer form (front - customer/account/login).
-4.Dump the data (to the file) passed to the customer form (admin - /customer/index/edit).
+3. Dump the data (to console) passed to the customer form (front - customer/account/login).
+4. Dump the data (to the file) passed to the customer form (admin - /customer/index/edit).
 5. Create an extension that writes "Hello World" at the top of a mini-cart popup.
