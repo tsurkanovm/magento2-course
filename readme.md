@@ -1,4 +1,5 @@
 ### Unit 4. Databases & Entity-Attribute-Value (EAV)
-#### 4.3.1. Product Save Operations
-1. Log every product save operation.
-2. Specify the productId and the data that has been changed.
+#### 4.4 Product Save Operations
+1. Create a table with an install script for the module Training_Vendor.
+2. Create a regular upgrade script to add an additional column.
+3. Create a data upgrade script to set a config value.
