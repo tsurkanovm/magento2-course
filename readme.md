@@ -1,8 +1,7 @@
 ### Unit Five. Service Contracts
 #### 5.4. Services API: Repositories & Business Logic.
-##### 5.4.1. Obtain a list of products via the product repository.
-      Print a list of products.
+##### 5.4.2. Obtain a list of customers via the customer repository .
+      Output the object type.
+      Print a list of customers.
       Add a filter to the search criteria.
-      Add another filter with a logical AND condition.
-      Add a sort order instruction.
-      Limit the number of products to 6.
+      Add another filter with a logical OR condition.
