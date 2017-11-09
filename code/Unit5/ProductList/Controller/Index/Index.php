@@ -3,11 +3,9 @@
 namespace Unit5\ProductList\Controller\Index;
 
 use Magento\Catalog\Api\Data\ProductInterface;
-use Magento\Catalog\Model\Product\Type\Virtual;
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\Framework\Api\FilterBuilder;
 use Magento\Framework\Api\SearchCriteriaBuilder;
-use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\SortOrderBuilder;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\Action\Action;
@@ -105,6 +103,9 @@ class Index extends Action
         $this->searchCriteriaBuilder->setCurrentPage(2);
     }
 
+    /**
+     * @return ProductInterface[]
+     */
     private function getProductsFromRepository()
     {
         $this->setProductTypeFilter();
@@ -114,6 +115,9 @@ class Index extends Action
         return $products->getItems();
     }
 
+    /**
+     * @param ProductInterface $product
+     */
     private function outputProduct(ProductInterface $product)
     {
         $this->getResponse()->appendBody(sprintf(
