@@ -1,7 +1,8 @@
-### Unit 4. Databases & Entity-Attribute-Value (EAV)
-#### 4.7. Attribute Management.
-##### 4.7.1. Create a text input attribute (1) from the Admin interface.
-##### 4.7.2. Create a text input attribute (2) from an install data method.
-##### 4.7.3. Create a multiselect product attribute from an upgrade data method.
-##### 4.7.4. Customize the frontend rendering of the attribute values.
-##### 4.7.5. Create a select attribute with a predefined list of options .
+### Unit Five. Service Contracts
+#### 5.4. Services API: Repositories & Business Logic.
+##### 5.4.1. Obtain a list of products via the product repository.
+      Print a list of products.
+      Add a filter to the search criteria.
+      Add another filter with a logical AND condition.
+      Add a sort order instruction.
+      Limit the number of products to 6.
