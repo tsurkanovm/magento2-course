@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Unit5\CustomRepository\Api\Data\ExampleInterface"
+                type="Unit5\CustomRepository\Model\Data\Example"/>
+    <preference for="Unit5\CustomRepository\Api\ExampleRepositoryInterface"
+                type="Unit5\CustomRepository\Model\ResourceModel\ExampleRepository"/>
+
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="Unit5\CustomRepository\Api\Data\ExampleInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="string">training_repository_example</item>
+                    <item name="identifierField" xsi:type="string">example_id</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
