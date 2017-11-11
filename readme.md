@@ -3,8 +3,7 @@
 #### 1.3.1. Create a new module. Make a mistake in its config. Create a second module dependent on the first.
 #### 1.6.2: Object Manager
 Go back to the two modules created you created in Exercise 1.3.1, Unit1_FirstModule and Unit1_SecondModule*.
-In Unit1_FirstModule, create the folder “MagentoU”. In this folder, create the class “Test”. The code to be used is given
-below.
+In Unit1_FirstModule, create the folder “MagentoU”. In this folder, create the class “Test”. 
 #### 1.7.2: Plugins
 For the class... Magento\Catalog\Model\Product and the method... getPrice():
 Create a plugin that will modify price (afterPlugin).
