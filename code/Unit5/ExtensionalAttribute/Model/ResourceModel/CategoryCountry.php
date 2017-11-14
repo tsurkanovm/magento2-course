@@ -6,8 +6,6 @@ use \Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class CategoryCountry extends AbstractDb
 {
-
-
     /**
      * Initialize resource
      *
@@ -17,7 +15,4 @@ class CategoryCountry extends AbstractDb
     {
         $this->_init('category_countries', 'id');
     }
-
-
 }
-

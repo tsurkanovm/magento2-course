@@ -22,6 +22,7 @@ class CategoryCountry extends AbstractModel implements CategoryCountryInterface
 
         parent::__construct($context, $registry, $resource, $resourceCollection);
     }
+
     /**
      * @return void
      */
