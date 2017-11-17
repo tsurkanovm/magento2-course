@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">news_form.news_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">News Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save_and_continue" class="Unit6\News\Block\Adminhtml\Page\Edit\SaveAndContinueButton"/>
+            <button name="save" class="Unit6\News\Block\Adminhtml\Page\Edit\SaveButton"/>
+            <button name="reset" class="Unit6\News\Block\Adminhtml\Page\Edit\ResetButton"/>
+            <button name="delete" class="Unit6\News\Block\Adminhtml\Page\Edit\DeleteButton"/>
+            <button name="back" class="Unit6\News\Block\Adminhtml\Page\Edit\BackButton"/>
+        </buttons>
+        <namespace>news_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>news_form.news_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="news_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="news/index/save"/>
+        </settings>
+        <dataProvider class="Unit6\News\Model\FormDataProvider" name="news_form_data_source">
+            <settings>
+                <requestFieldName>news_id</requestFieldName>
+                <primaryFieldName>news_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field name="news_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">news</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>news_id</dataScope>
+            </settings>
+        </field>
+        <field name="title" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">news</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">News Title</label>
+                <dataScope>title</dataScope>
+            </settings>
+        </field>
+    </fieldset>
+    <fieldset name="content" sortOrder="10">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">Content</label>
+        </settings>
+
+        <field name="content" formElement="wysiwyg">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">news</item>
+                </item>
+            </argument>
+            <settings>
+                <additionalClasses>
+                    <class name="admin__field-wide">true</class>
+                </additionalClasses>
+                <label/>
+                <dataScope>content</dataScope>
+            </settings>
+            <formElements>
+                <wysiwyg>
+                    <settings>
+                        <wysiwyg>true</wysiwyg>
+                    </settings>
+                </wysiwyg>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

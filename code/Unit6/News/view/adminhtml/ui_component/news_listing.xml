@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">news_listing.news_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add New News</label>
+            </button>
+        </buttons>
+        <spinner>news_columns</spinner>
+        <deps>
+            <dep>news_listing.news_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="news_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">news_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Unit6_News::grid</aclResource>
+        <dataProvider class="Unit6\News\Model\DataProvider" name="news_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>news_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <columns name="news_columns">
+        <settings>
+            <editorConfig>
+                <param name="clientConfig" xsi:type="array">
+                    <item name="saveUrl" xsi:type="url" path="cms/block/inlineEdit"/>
+                    <item name="validateBeforeSave" xsi:type="boolean">false</item>
+                </param>
+                <param name="indexField" xsi:type="string">news_id</param>
+                <param name="enabled" xsi:type="boolean">true</param>
+                <param name="selectProvider" xsi:type="string">news_listing.news_listing.news_columns.ids</param>
+            </editorConfig>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">news_listing.news_listing.news_columns_editor</item>
+                    <item name="target" xsi:type="string">startEdit</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                        <item name="1" xsi:type="boolean">true</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>news_id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>55</resizeDefaultWidth>
+            </settings>
+        </selectionsColumn>
+        <column name="news_id">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="title">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Title</label>
+            </settings>
+        </column>
+
+        <column name="creation_time" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Created</label>
+            </settings>
+        </column>
+        <column name="update_time" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Modified</label>
+            </settings>
+        </column>
+
+        <actionsColumn name="actions" class="Unit6\News\Ui\Component\Listing\Column\NewsActions">
+            <settings>
+                <indexField>post_id</indexField>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>

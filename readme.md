@@ -1,6 +1,6 @@
-### Unit Five. Data API
-#### 5.5.1. Create a new entity category_countries.
-1. Include category_country_id, category_id, country_id.
-2. Add a few records to that table (using DataInstallScript).
-3. Add an extension attribute "countries" to the category.
-4. Add controller to show category with assigned country (country should represents by it code, not id) 
+### Unit Six. Admin
+#### Create grid and form for custom entity.
+1. Create custom entity wit arbitrary data.
+2. Create grid for new entity.
+3. Add controller, menu and ACL for new grid option.
+4. Create simple edit form for new entity 

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Unit6\News\Api\Data\NewsInterface"
+                type="Unit6\News\Model\Data\News"/>
+
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="Unit6\News\Api\Data\NewsInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="string">unit6_news</item>
+                    <item name="identifierField" xsi:type="string">news_id</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
