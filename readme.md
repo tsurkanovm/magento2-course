@@ -1,6 +1,7 @@
 ### Unit Six. Admin
-#### Create grid and form for custom entity.
-1. Create custom entity wit arbitrary data.
-2. Create grid for new entity.
-3. Add controller, menu and ACL for new grid option.
-4. Create simple edit form for new entity 
+#### System Configuration
+##### 1. Create a new element in the system configuration.
+###### 1.1 Name it “test”.
+###### 2.1 Put it into the General section.
+###### 3.1 Make it a “yes/no” select.
+##### 2. Create a new element in the system configuration with custom code that renders “Hello World”. 
