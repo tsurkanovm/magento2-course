@@ -132,7 +132,7 @@ Magento\Store\Model\Store::getRootCategoryId()
 1. Create custom entity wit arbitrary data.
 2. Create grid for new entity.
 3. Add controller, menu and ACL for new grid option.
-4. Create simple edit form for new entity . 
+4. Create simple edit form for new entity. 
 
 #### System Configuration
 ##### 1. Create a new element in the system configuration.
